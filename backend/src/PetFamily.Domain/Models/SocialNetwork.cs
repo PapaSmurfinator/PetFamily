@@ -2,6 +2,6 @@
 
 public sealed class SocialNetwork
 {
-    public string Name { get; set; }
-    public string Url { get; set; }
+    public string Name { get; private set; } = string.Empty!;
+    public string Url { get; private set; } = string.Empty!;
 }
