@@ -19,4 +19,5 @@ public sealed class Pet
     public Status Status { get; private set; } = new();
     public Requisites Requisites { get; private set; } =new ();
     public DateTime CreatedAt { get; init; } = DateTime.UtcNow;
+    public List<PetPhoto> PetPhotos { get; private set; } = new();
 }
