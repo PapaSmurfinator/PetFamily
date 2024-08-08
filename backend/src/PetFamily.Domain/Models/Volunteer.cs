@@ -12,5 +12,5 @@ public sealed class Volunteer
     public string PhoneNumber{ get; private set; } = string.Empty;
     public List<SocialNetwork> SocialNetworks { get; private set; } = new();
     public List<Requisites> Requisites { get; private set; } = new();
-    public List<Pet> Pets { get; set; } = new();
+    public List<Pet> Pets { get; private set; } = new();
 }
