@@ -2,5 +2,5 @@
 
 public sealed class Status
 {
-    public string Name { get; set; } = string.Empty!;
+    public string Name { get; private set; } = string.Empty!;
 }

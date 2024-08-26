@@ -17,7 +17,7 @@ public sealed class Pet
     public DateOnly Birthdate { get; private set; }
     public bool IsVaccinated { get; private set; } = false;
     public Status Status { get; private set; } = new();
-    public Requisites Requisites { get; private set; } =new ();
     public DateTime CreatedAt { get; init; } = DateTime.UtcNow;
-    public List<PetPhoto> PetPhotos { get; private set; } = new();
+    public List<Requisites> Requisites { get; private set; } = [];
+    public List<PetPhoto> PetPhotos { get; private set; } = [];
 }

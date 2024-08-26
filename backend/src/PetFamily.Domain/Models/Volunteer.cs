@@ -10,7 +10,7 @@ public sealed class Volunteer
     public int NumberOfPetsLookingHome { get; private  set; } = 0;
     public int NumberOfPetsBeingTreated { get; private  set; } = 0;
     public string PhoneNumber{ get; private set; } = string.Empty;
-    public List<SocialNetwork> SocialNetworks { get; private set; } = new();
-    public List<Requisites> Requisites { get; private set; } = new();
-    public List<Pet> Pets { get; private set; } = new();
+    public List<SocialNetwork> SocialNetworks { get; private set; } = [];
+    public List<Requisites> Requisites { get; private set; } = [];
+    public List<Pet> Pets { get; private set; } = [];
 }
