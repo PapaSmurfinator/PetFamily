@@ -2,6 +2,9 @@
 
 public sealed class Pet
 {
+    private readonly List<Requisites> _requisites = [];
+    private readonly List<PetPhoto> _petPhotos = [];
+
     public Guid Id { get; private set; }
     public string Name { get; private set; } = string.Empty!;
     public string Type { get; private set; } = string.Empty!;
@@ -18,6 +21,6 @@ public sealed class Pet
     public bool IsVaccinated { get; private set; } = false;
     public Status Status { get; private set; } = new();
     public DateTime CreatedAt { get; init; } = DateTime.UtcNow;
-    public List<Requisites> Requisites { get; private set; } = [];
-    public List<PetPhoto> PetPhotos { get; private set; } = [];
+    public IReadOnlyList<Requisites> Requisites => _requisites;
+    public IReadOnlyList<PetPhoto> PetPhotos => _petPhotos;
 }

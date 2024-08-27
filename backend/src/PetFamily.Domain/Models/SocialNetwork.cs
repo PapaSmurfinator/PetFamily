@@ -2,7 +2,7 @@
 
 public sealed class SocialNetwork
 {
-    public Guid Id { get; private set; }
-    public string Name { get; private set; } = string.Empty!;
-    public string Url { get; private set; } = string.Empty!;
+    public Guid Id { get; }
+    public string Name { get; } = string.Empty!;
+    public string Url { get; } = string.Empty!;
 }

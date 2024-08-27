@@ -2,7 +2,7 @@
 
 public sealed class Requisites
 {
-    public Guid Id { get; private set; }
-    public string Name { get; private set; } = string.Empty!;
-    public string Description { get; private set; } = string.Empty!;
+    public Guid Id { get;}
+    public string Name { get;} = string.Empty!;
+    public string Description { get;} = string.Empty!;
 }
