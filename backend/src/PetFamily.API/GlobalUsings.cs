@@ -1,1 +1,1 @@
-﻿
+﻿global using PetFamily.Infrastructure.Data;

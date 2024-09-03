@@ -1,0 +1,41 @@
+version: '3.4'
+
+networks:
+  petfamily:
+    driver: bridge
+
+services:
+  petfamily.api:
+    image: ${DOCKER_REGISTRY-}petfamilyapi
+    build:
+      context: .
+      dockerfile: src/PetFamily.API/Dockerfile
+  postgres_db:
+    container_name : postgres
+    image: postgres:latest
+    environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+        POSTGRES_DB: petfamily
+    ports:
+    - "5432:5432"
+    networks:
+    - petfamily
+    volumes:
+    - postgres-data:/var/lib/postgresql/data
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+        PGADMIN_DEFAULT_EMAIL: admin@admin.com
+        PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+    - "5050:80"
+    volumes:
+    - ./pgadmin_data:/var/lib/pgadmin
+    networks:
+    - petfamily
+volumes:
+  postgres-data:
+  pgadmin_data:  
